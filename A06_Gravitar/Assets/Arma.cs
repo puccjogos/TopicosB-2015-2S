@@ -15,6 +15,7 @@ public class Arma : MonoBehaviour
 				transform.position,
 				transform.rotation) as Rigidbody2D;
 			bala.velocity = transform.right * velocidadeTiro;
+			Destroy (bala.gameObject, 4f);
 		}
 	}
 }

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Nave : MonoBehaviour
 {
+	public static int pontos = 0;
+	
 	public float velocidadeAngular;
 	public float forcaFoguete;
 	public float combustivel;
@@ -31,6 +33,11 @@ public class Nave : MonoBehaviour
 			combustivel -= taxaConsumo * Time.fixedDeltaTime;
 		}
 		combustivel = Mathf.Max (0, combustivel);
+	}
+	
+	void AlterarCombustivel (float novo)
+	{
+		combustivel += novo;
 	}
 }
 
